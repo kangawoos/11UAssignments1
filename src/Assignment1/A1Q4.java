@@ -32,5 +32,37 @@ public class A1Q4 {
         // have diddo move
         diddo.move();
         diddo.move();
+        
+        // have diddo turn
+        diddo.turnLeft();
+        
+        // have brap move
+        brap.move();
+        
+        // have brap turn
+        brap.turnLeft();
+        
+        // have brap move
+        brap.move();
+        
+        // have brap turn
+        brap.turnLeft();
+        brap.turnLeft();
+        brap.turnLeft();
+        
+        // have brap move
+        brap.move();
+        
+        // have brap turn
+        brap.turnLeft();
+        brap.turnLeft();
+        brap.turnLeft();
+        
+        // have brap move
+        brap.move();
+        
+        // have diddo move
+        diddo.move();
+        
     }
 }
