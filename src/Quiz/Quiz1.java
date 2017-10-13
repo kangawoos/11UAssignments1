@@ -40,7 +40,7 @@ public class Quiz1 {
         new Thing(country, 0, 4);
         new Thing(country, 0, 5);
 
-            while (steve.frontIsClear()) {
+        while (steve.frontIsClear()) {
             steve.move();
             if (steve.canPickThing() && steve.getAvenue() != 0) {
                 steve.pickThing();
@@ -52,15 +52,15 @@ public class Quiz1 {
                 steve.turnLeft();
                 steve.turnLeft();
             }
+        }
+        if (!steve.frontIsClear() && !steve.canPickThing()) {
+            steve.turnLeft();
+            steve.turnLeft();
+            while (steve.frontIsClear()) {
+                steve.move();
             }
-           if (!steve.frontIsClear()&& !steve.canPickThing()) {
-               steve.turnLeft();
-               steve.turnLeft();
-           while (steve.frontIsClear())
-               steve.move();
-           }
-           steve.turnLeft();
-           steve.turnLeft();
+        }
+        steve.turnLeft();
+        steve.turnLeft();
     }
 }
-           
