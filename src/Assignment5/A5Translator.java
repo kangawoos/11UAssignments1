@@ -34,6 +34,8 @@ public class A5Translator {
         for (int i = 0; i < wordDos.length(); i = i + 1) {
             // break the system if the word is "exit"
             if (wordUno.equals(quit)) {
+                // say goodbye to the user
+                System.out.println("Goodbye!");
                 break;
             }
 
