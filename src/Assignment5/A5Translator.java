@@ -25,14 +25,15 @@ public class A5Translator {
         wordUno = wordUno.toLowerCase();
         // create an empty string to later be replaced by the translated word
         String trans = "";
-        // create a string with spaces so the translator doesn't brake
+        // create a string with spaces so the translator doesn't break
         String wordDos = wordUno + "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ";
         // if the word "exit" is typed, break the translator
         String quit = "exit";
 
         // find a vowel by going through each letter
         for (int i = 0; i < wordDos.length(); i = i + 1) {
-            if (wordDos.equals(quit)) {
+            // break the system if the word is "exit"
+            if (wordUno.equals(quit)) {
                 break;
             }
 
@@ -96,7 +97,10 @@ public class A5Translator {
                 }
             }
         }
-        // tell the user their translated word
-        System.out.println("your word is " + trans);
+        // if the word is anything but the word "exit", print the following on screen
+        if (!wordUno.equals(quit)) {
+            // tell the user their translated word
+            System.out.println("your word is " + trans);
+        }
     }
 }
