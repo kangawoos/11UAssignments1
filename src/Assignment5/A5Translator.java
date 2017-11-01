@@ -19,7 +19,7 @@ public class A5Translator {
         // create a scanner
         Scanner input = new Scanner(System.in);
         // ask for a word to translate to ubbi dubbi
-        System.out.println("Please enter a word to translate to Ubbi Dubbi:");
+        System.out.println("Please enter a word/phrase to translate to Ubbi Dubbi:");
         String wordUno = input.nextLine();
         // convert word to lowercase
         wordUno = wordUno.toLowerCase();
@@ -102,7 +102,7 @@ public class A5Translator {
         // if the word is anything but the word "exit", print the following on screen
         if (!wordUno.equals(quit)) {
             // tell the user their translated word
-            System.out.println("your word is " + trans);
+            System.out.println("your word/phrase is " + trans);
         }
     }
 }
