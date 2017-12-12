@@ -12,6 +12,7 @@ import java.util.Scanner;
  */
 public class A7Q2 {
 
+    // create a procedure type method
     public void examGrade(double mark) {
         // create a blank string for the grade
         String grade = "";

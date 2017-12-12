@@ -36,7 +36,6 @@ public class A7Q1 {
         // store the value 
         double radiusIn = in.nextDouble();
 
-        // calculate area
         double area = test.circleArea(radiusIn);
         // tell the user their area
         System.out.println("the area of the circle is " + area + "cm");

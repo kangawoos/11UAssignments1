@@ -12,16 +12,21 @@ import java.util.Scanner;
  */
 public class A7Q5 {
 
+    // create a procedure type method
     public void chaotic(int linesAsterisks) {
+        // create an array for the amount of asterisks
         String[] asterisksNum = new String[5];
+        // give asterisks 5 different print types
         asterisksNum[0] = "*";
         asterisksNum[1] = "**";
         asterisksNum[2] = "***";
         asterisksNum[3] = "****";
         asterisksNum[4] = "*****";
 
+        // create a loop to print asterisks on the screen
         for (int i = 0; i < linesAsterisks; i++) {
             int random = (int) (Math.random() * (5));
+            // print the asterisks on the screen
             System.out.println(asterisksNum[random]);
         }
     }

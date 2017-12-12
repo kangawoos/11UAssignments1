@@ -12,6 +12,7 @@ import java.util.Scanner;
  */
 public class A7Q4 {
 
+    // create a double return type
     public double compoundInterest(double principal, double interestRate, double totalYears) {
         // calculate the new balance
         double newBalance = principal * (Math.pow(1 + interestRate, totalYears));

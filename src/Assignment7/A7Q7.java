@@ -13,17 +13,17 @@ import java.util.Scanner;
 public class A7Q7 {
 
     // create a void method type - a void performs an action
-    public void firstDigit(int number) {                           
+    public void firstDigit(int number) {
         // if the number is negative perform the following calculation
-        if (number < 0){
-            number = number * -1;               
+        if (number < 0) {
+            number = number * -1;
         }
         // while the number is greater than or equal to 10, perform the following calculation
-        while (number >= 10){
+        while (number >= 10) {
             number = number / 10;
         }
         // tell the user the first digit
-        System.out.println("the first digit of the number is " + number);             
+        System.out.println("the first digit of the number is " + number);
     }
 
     public static void main(String[] args) {

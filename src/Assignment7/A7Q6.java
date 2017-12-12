@@ -12,22 +12,22 @@ import java.util.Scanner;
  */
 public class A7Q6 {
 
-    // double return type - needs to send an answer
+    // int return type - needs to send an answer
     public int lastDigit(int number) {
         // create an integer for negative numbers
         int numberNeg = 0;
         // perform the calculations for negative numbers
-        numberNeg = number *- 1;
+        numberNeg = number * - 1;
         // find the last digit of the number
-        if (number > 0){    
-        // tell the user their last digit
-        System.out.println("the last digit of the number is " + number % 10);
-        } else {        
-        // tell the user their last digit
-        System.out.println("the last digit of the number is " + numberNeg % 10);        
-    }
-            // return an answer
-            return number;
+        if (number > 0) {
+            // tell the user their last digit
+            System.out.println("the last digit of the number is " + number % 10);
+        } else {
+            // tell the user their last digit
+            System.out.println("the last digit of the number is " + numberNeg % 10);
+        }
+        // return an answer
+        return number;
     }
 
     public static void main(String[] args) {

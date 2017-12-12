@@ -12,8 +12,9 @@ import java.util.Scanner;
  */
 public class A7Q3 {
 
+    // create a double return type
     public double factors(double number) {
-        // create a blank string for a factor
+        // create a double for a factor
         double factors = 0;
 
         // use a loop to arrange the info 

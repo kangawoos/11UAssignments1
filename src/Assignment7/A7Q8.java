@@ -12,14 +12,20 @@ import java.util.Scanner;
  */
 public class A7Q8 {
 
+    // create a boolean return type
     public boolean allDigitsOdd(String num) {
+        // create a loop to gather the information about the number
         for (int i = 0; i < num.length(); i++) {
+            // if there is an even number in the number, return false
             if (num.charAt(i) == '0' || num.charAt(i) == '2' || num.charAt(i) == '4' || num.charAt(i) == '6' || num.charAt(i) == '8') {
+                // tell the user the result
                 System.out.println("There are one or more even digits");
                 return false;
-            } 
+            }
         }
+        // tell the user the result
         System.out.println("There are only odd digits");
+        // if the loop earlier does not return false, return true
         return true;
     }
 
