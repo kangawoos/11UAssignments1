@@ -40,7 +40,7 @@ public class A2Q2 {
         new Wall(bruh, 2, 7, Direction.SOUTH);
         new Wall(bruh, 2, 8, Direction.SOUTH);
         new Wall(bruh, 2, 9, Direction.SOUTH);
-        
+
         // create new thing
         new Thing(bruh, 2, 9);
 
@@ -48,8 +48,8 @@ public class A2Q2 {
         while (!ninja.canPickThing()) {
             if (ninja.frontIsClear()) {
                 ninja.move();
-                
-            // if front isnt clear, turn left, move, left, left, left, move, left, left, left, move, left
+
+                // if front isnt clear, turn left, move, left, left, left, move, left, left, left, move, left
             } else {
                 ninja.turnLeft();
                 ninja.move();
@@ -64,9 +64,6 @@ public class A2Q2 {
                 ninja.turnLeft();
 
             }
-
-
-
-
         }
     }
+}

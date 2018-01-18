@@ -60,7 +60,7 @@ public class A3Q4 {
         new Wall(country, 5, 4, Direction.WEST);
         new Wall(country, 4, 5, Direction.EAST);
         new Wall(country, 5, 5, Direction.EAST);
-        
+
         // perform the following tasks 4 times
         for (int count1 = 0; count1 < 4; count1 = count1 + 1) {
             steve.move();
@@ -84,7 +84,7 @@ public class A3Q4 {
         steve.turnLeft();
         steve.turnLeft();
         steve.turnLeft();
-        
+
         // perform the following tasks 4 times
         for (int count3 = 0; count3 < 4; count3 = count3 + 1) {
             steve.move();
@@ -96,7 +96,7 @@ public class A3Q4 {
         steve.turnLeft();
         steve.turnLeft();
         steve.turnLeft();
-        
+
         // perform the following tasks 4 times
         for (int count4 = 0; count4 < 4; count4 = count4 + 1) {
             steve.move();
@@ -109,3 +109,4 @@ public class A3Q4 {
         steve.turnLeft();
         steve.turnLeft();
     }
+}
