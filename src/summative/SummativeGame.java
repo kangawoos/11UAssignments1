@@ -4,7 +4,6 @@ package summative;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JComponent;
@@ -17,6 +16,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
+import java.util.Random;
 
 /**
  *
@@ -51,19 +51,19 @@ public class SummativeGame extends JComponent {
     boolean playerDown = false;
     boolean playerLeft = false;
     boolean playerRight = false;
-    // set the size of the cannon
+    // set the size of the cannons
     int cannonSize = 20;
-    // create the five cannons and set their starting points
+    // create the eight cannons and set their starting points
     Rectangle cannon1 = new Rectangle(WIDTH / 2 - cannonSize / 2, HEIGHT / 2 - cannonSize / 2, cannonSize, cannonSize);
     Rectangle cannon2 = new Rectangle(WIDTH / 3 - cannonSize / 2, 220 - cannonSize / 2, cannonSize, cannonSize);
     Rectangle cannon3 = new Rectangle(450 - cannonSize / 2, 425 - cannonSize / 2, cannonSize, cannonSize);
     Rectangle cannon4 = new Rectangle(600 - cannonSize / 2, 100 - cannonSize / 2, cannonSize, cannonSize);
     Rectangle cannon5 = new Rectangle(200 - cannonSize / 2, 500 - cannonSize / 2, cannonSize, cannonSize);
     Rectangle cannon6 = new Rectangle(WIDTH / 2 - cannonSize / 2, HEIGHT / 2 - cannonSize / 2, cannonSize, cannonSize);
-    Rectangle cannon7 = new Rectangle(600 - cannonSize / 2, 100 - cannonSize / 2, cannonSize, cannonSize);
+    Rectangle cannon7 = new Rectangle(700 - cannonSize / 2, 500 - cannonSize / 2, cannonSize, cannonSize);
     Rectangle cannon8 = new Rectangle(200 - cannonSize / 2, 500 - cannonSize / 2, cannonSize, cannonSize);
     // set the players speed
-    int playerSpeed = 2;
+    int playerSpeed = 3;
     // set the players score to zero at the start
     int playerScore = 0;
     // set different cannon speeds for variety
@@ -85,11 +85,11 @@ public class SummativeGame extends JComponent {
     int cannon4XDirection = -1;
     // cannon 5 travels to the right
     int cannon5XDirection = 1;
-    
+    // cannon 6 travels up
     int cannon6YDirection = 1;
-    
-    int cannon7YDirection = 1;
-    
+    // cannon 7 travels down
+    int cannon7YDirection = -1;
+    // cannon 8 travels up
     int cannon8YDirection = 1;
 
     // GAME VARIABLES END HERE   
@@ -137,6 +137,45 @@ public class SummativeGame extends JComponent {
         // draw the blocks
         g.setColor(Color.GREEN);
         for (int i = 0; i < blocks.length; i++) {
+            // create a random variable
+            Random rand = new Random();
+            // create an integer to create random flashing
+            int sieze = rand.nextInt(10) + 1;
+            // begin setting colours for the seizure blocks
+            switch (sieze) {
+                case 1:
+                    g.setColor(Color.magenta);
+                    break;
+                case 10:
+                    g.setColor(Color.CYAN);
+                    break;
+                case 2:
+                    g.setColor(Color.magenta);
+                    break;
+                case 3:
+                    g.setColor(Color.CYAN);
+                    break;
+                case 4:
+                    g.setColor(Color.magenta);
+                    break;
+                case 5:
+                    g.setColor(Color.CYAN);
+                    break;
+                case 6:
+                    g.setColor(Color.magenta);
+                    break;
+                case 7:
+                    g.setColor(Color.CYAN);
+                    break;
+                case 8:
+                    g.setColor(Color.magenta);
+                    break;
+                case 9:
+                    g.setColor(Color.CYAN);
+                    break;
+                default:
+                    break;
+            }
             g.fillRect(blocks[i].x, blocks[i].y, blocks[i].width, blocks[i].height);
         }
 
@@ -161,7 +200,12 @@ public class SummativeGame extends JComponent {
         // set the font to the information font
         g.setFont(informFont);
         // tell the user the info (printed at the top middle of the screen)
-        g.drawString("GET TO THE FINISH BEFORE 2000", 340, 13);
+        g.drawString("GET TO THE FINISH BEFORE 3000", 350, 13);
+
+        // set the font to the information font
+        g.setFont(informFont);
+        // tell the user the info (printed at the top middle of the screen)
+        g.drawString("WARNING: SEIZURE INDUCING", 630, 590);
 
         // draw the first cannon
         g.setColor(Color.YELLOW);
@@ -175,23 +219,23 @@ public class SummativeGame extends JComponent {
         g.setColor(Color.YELLOW);
         g.fillRect(cannon3.x, cannon3.y, cannon3.width, cannon3.height);
 
-        // draw the four cannon
+        // draw the fourth cannon
         g.setColor(Color.YELLOW);
         g.fillRect(cannon4.x, cannon4.y, cannon4.width, cannon4.height);
 
-        // draw the five cannon
+        // draw the fifth cannon
         g.setColor(Color.YELLOW);
         g.fillRect(cannon5.x, cannon5.y, cannon5.width, cannon5.height);
 
-        // draw the first cannon
+        // draw the sixth cannon
         g.setColor(Color.YELLOW);
         g.fillRect(cannon6.x, cannon6.y, cannon6.width, cannon6.height);
-        
-        // draw the first cannon
+
+        // draw the seventh cannon
         g.setColor(Color.YELLOW);
         g.fillRect(cannon7.x, cannon7.y, cannon7.width, cannon7.height);
-        
-        // draw the first cannon
+
+        // draw the eighth cannon
         g.setColor(Color.YELLOW);
         g.fillRect(cannon8.x, cannon8.y, cannon8.width, cannon8.height);
         // GAME DRAWING ENDS HERE
@@ -264,14 +308,14 @@ public class SummativeGame extends JComponent {
 
             // move the fifth cannonball
             cannon5.x = cannon5.x + cannon5XDirection * cannon5Speed;
-            
-            // move the third cannonball
+
+            // move the sixth cannonball
             cannon6.y = cannon6.y + cannon6YDirection * cannon6Speed;
 
-            // move the fourth cannonball
+            // move the seventh cannonball
             cannon7.y = cannon7.y + cannon7YDirection * cannon7Speed;
 
-            // move the fifth cannonball
+            // move the eighth cannonball
             cannon8.y = cannon8.y + cannon8YDirection * cannon8Speed;
 
             // move player and add score
@@ -320,9 +364,9 @@ public class SummativeGame extends JComponent {
                 }
             }
 
-            // if the score goes over 2000, game over
-            // (35 seconds to complete level)
-            if (playerScore == 2001) {
+            // if the score goes over 3000, game over
+            // (55 seconds to complete level)
+            if (playerScore == 3001) {
                 break;
             }
 
@@ -350,18 +394,18 @@ public class SummativeGame extends JComponent {
             if (cannon5.intersects(player)) {
                 break;
             }
-                
-                 // if the third cannon hits the player, end game 
+
+            // if the sixth cannon hits the player, end game 
             if (cannon6.intersects(player)) {
                 break;
             }
 
-            // if the fourth cannon hits the player, end game 
+            // if the seventh cannon hits the player, end game 
             if (cannon7.intersects(player)) {
                 break;
             }
 
-            // if the fifth cannon hits the player, end game 
+            // if the eighth cannon hits the player, end game 
             if (cannon8.intersects(player)) {
                 break;
             }
@@ -390,18 +434,18 @@ public class SummativeGame extends JComponent {
             if (cannon5.x > WIDTH) {
                 cannon5.x = 0;
             }
-            
-            // if the cannon hits the left side of the screen, teleport back to the right side of the screen
+
+            // if the cannon hits the top of the screen, teleport back to the bottom of the screen
             if (cannon6.y > HEIGHT) {
                 cannon6.y = 0;
             }
 
-            // if the cannon hits the left side of the screen, teleport back to the right side of the screen
-            if (cannon7.y > HEIGHT) {
-                cannon7.y = 0;
+            // if the cannon hits the bottom of the screen, teleport back to the top of the screen
+            if (cannon7.y < 0) {
+                cannon7.y = HEIGHT;
             }
 
-            // if the cannon hits the right side of the screen, teleport back to the left side of the screen
+            // if the cannon hits the top of the screen, teleport back to the bottom of the screen
             if (cannon8.y > HEIGHT) {
                 cannon8.y = 0;
             }
