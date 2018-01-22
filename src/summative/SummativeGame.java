@@ -19,7 +19,7 @@ import java.awt.event.MouseWheelEvent;
 import java.util.Random;
 
 /**
- *
+//
  * @author wrigm7406
  */
 public class SummativeGame extends JComponent {
@@ -396,7 +396,7 @@ public class SummativeGame extends JComponent {
             }
 
             // if the sixth cannon hits the player, end game 
-            if (cannon6.intersects(player)) {
+            if (cannon6.intersects(player)) {               
                 break;
             }
 
